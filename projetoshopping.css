@@ -1,0 +1,151 @@
+* {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 401;
+    color: #5D5D7D;
+}
+
+/*header {
+    margin: 90px 0px 144px 76px;
+}*/
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+.container-left {
+    display: inline-block;
+    width: 60%;
+    padding: 136px;
+    margin-top: 14%;
+}
+
+
+
+.container-right {
+    display: inline-block;
+    background: #5d5d7d;
+    /*opacity: 0.16;opacidade vai de 0 (invisivel ate 1 (completamente visivel)*/
+    background-color: rgba(93, 93, 125,0.16 ); /*O rgba no CSS é usado para definir cores com um canal de transparência (alfa). Isso permite que você controle a opacidade de uma cor, tornando-a parcialmente transparente ou translúcida. É uma extensão da função rgb que, além dos componentes vermelho, verde e azul, adiciona um quarto valor, o alfa, que varia de 0 (totalmente transparente) a 1 (totalmente opaco).*/
+    height: 100vh;
+    width: 40%;
+    position:absolute;
+}
+
+a {
+    color: #5D5D7D;
+    font-size: 28px;
+    font-style: normal;
+    line-height: normal;
+    margin-right: 41px;
+    cursor: pointer;
+}
+a:nth-child(2) {
+    opacity: .4;
+
+}
+
+a:hover {
+    opacity: .4;
+}
+
+a:active {
+    opacity: .8;
+}
+
+header {
+    margin: 24px 0 0 57px;
+}
+
+img {
+    position: relative;
+    right: 130px;
+    top: 18%;
+}
+
+h1 {
+font-size: 70px;
+font-style: normal;
+line-height: 80px;
+width: 368px;
+}
+
+p {
+font-size: 28px;
+font-style: normal;
+line-height: 48px;
+opacity: 0.6;
+margin: 15px 0;
+width: 540px;
+}
+
+.buttom-getstarted {
+    width: 269px;
+    height: 62px;
+    background: #9499EA;
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.10);
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #ffff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .8;
+}
+button:active {
+    opacity: .5;
+}
+
+@media screen and (max-width:900px){
+    .container-left {
+        width: 100%;
+        height: 50%;
+        padding: 0%;
+        margin: 0;
+    }
+
+    .container-right {
+        display: block;
+        height: auto;
+        width: 100%;
+        position: static;
+        padding: 40px;
+    }
+    img {
+        position: static;
+        width: 90%;
+    }
+    header {
+        display: none;
+    }
+    h1 {
+        width: auto;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 52px;
+        margin: 58px 53px 0 50px;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 15px 40px;
+        width: auto;
+    }
+    button {
+        margin: 0 auto;
+        display: block;
+        /* este é uma tecnica para que o botão se ajuste mais facilmente. Porém só fiunciona se o display fpr block*/
+}
+}
+@media screen and (max-width:375px) {
+    .container-left {
+        height: 30%;
+    }
+}

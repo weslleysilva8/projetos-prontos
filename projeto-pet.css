@@ -1,0 +1,128 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+header {
+    margin: 44px 0 144px 76px;
+}
+
+.link-header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: normal;/*isso seria a altura da linha*/
+    color: #989D9C;
+    cursor: pointer; /*isso serve para colocar a mãozinha*/
+    margin-right: 23px;
+}
+.buttom-header {
+    background: #665ae1;
+    border-radius: 20.5px; /*seria o raio da borda*/
+    height: 41px;
+    width: 130px;
+    border: none;
+    color: #FFF;
+    line-height: normal;
+    font-weight: 601;
+    font-size: 24px;
+    cursor: pointer;
+}
+.logo {
+    width: 568px;
+    height: 500px;
+    margin-left: 125px;
+    display: inline-block;
+    padding-right: 50px;
+}
+section {
+    display: flex;
+}
+h1 {
+    line-height: 122px;
+    font-weight: 900;
+    font-size: 100px;
+    color: #515151;
+}
+h2 {
+    font-size: 58px;
+    font-weight: 500;
+    line-height: normal;
+    color: #515151;
+}
+.txt {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    width: 515px;
+    color: #848484;
+    display: inline-block;
+}
+.button-explore {
+    background: #adff00;
+    border-radius: 30px;
+    width: 239px;
+    height: 64px;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #000;
+    font-weight: 700;
+}
+
+@media screen and (max-width:900px) {
+    
+    header {
+        display: none;
+    }
+    section {
+        height: 100vh; /* ocupa toda a altura da tela */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* ou space-evenly */
+        align-items: center;
+        padding: 15% 20px 20%; /* margem top da imagem (15%), bottom do texto (20%) */
+        box-sizing: border-box;
+        text-align: center;
+    }
+    h1 {
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+    margin: 58px 53px 0 50px;
+    }
+    h2 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    
+    }
+    h1 h2 {
+        padding: 0;
+        margin: 0;
+    }
+    .logo {
+    height: 50vh;      /* 50% da altura da tela */
+    width: 100%;       /* largura automática para manter proporção */
+    display: block;
+    margin: 0 auto;    /* centraliza horizontalmente */
+    padding: 54px;
+    }
+    p {
+        display: none;
+    }
+    .button-explore {
+    margin-top: 20px;
+    margin-left: 135px;
+    display: block;
+
+    }
+}
