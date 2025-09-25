@@ -12,25 +12,25 @@
 <body>
     <img id="logo" src="assets/logo.gif" alt="logo-gif-money">
     <main>
-        <label for="options" id="conversor">
+        <label id="conversor">
             Converter <b>de</b>:
-            <select name="" id="options">
-                <option value="">R$ Real Brasileiro</option>
-                <option value="">US$ Dólar Americano</option>
-                <option value="">€ Euro</option>
+            <select name="" class="currency-select">
+                <option value="BRL">R$ Real Brasileiro</option>
+                <option value="USD">US$ Dólar Americano</option>
+                <option value="EUR">€ Euro</option>
             </select>
         </label>
 
-        <label for="options2" id="convertido">
+        <label id="convertido">
             Converter <b>para</b>:
-            <select name="options" id="options2">
-                <option value="">R$ Real Brasileiro</option>
-                <option value="">US$ Dólar Americano</option>
-                <option value="">€ Euro</option>
+            <select name="options" class="currency-select2">
+                <option value="USD">US$ Dólar Americano</option>
+                <option value="BRL">R$ Real Brasileiro</option>
+                <option value="EUR">€ Euro</option>
             </select>
         </label>
         <br>
-        <label for="input-currency" class="valor">
+        <label  class="valor">
             Valor:
             <input type="number" placeholder="Digite o valor" id="input-currency">
         </label>
