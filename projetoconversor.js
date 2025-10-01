@@ -6,8 +6,10 @@ const toCurrency = document.querySelector(".currency-select2");
 // Taxas de câmbio fixas
 const rates = {
   BRL: 1,
-  USD: 5.34,
-  EUR: 6.25
+  USD: 5.33,
+  EUR: 6.25,
+  GBP: 7.18,
+  BTC: 627613.73
 };
 
 // Função principal
@@ -46,13 +48,19 @@ function changeCurrencyTo() {
   if (toCurrency.value === "USD") {
     currencyName.innerHTML = "Dólar Americano";
     currencyImg.src = "./assets/dolar.png";
-  } else if (toCurrency.value === "EUR") {
+  } if (toCurrency.value === "EUR") {
     currencyName.innerHTML = "Euro";
     currencyImg.src = "./assets/euro.png";
-  } else {
+  } else if (toCurrency.value === "GBP") {
+    currencyName.innerHTML = "Libra Esterlina";
+    currencyImg.src = "./assets/libra.png";
+  } else if (toCurrency.value === "BRL") {
     currencyName.innerHTML = "Real";
     currencyImg.src = "./assets/real.png";
-  }
+  } else if (toCurrency.value === "BTC") {
+    currencyName.innerHTML = "Bitcoin";
+    currencyImg.src = "./assets/bitcoin.png";
+  };
 
   convertValues(); // atualiza valor ao trocar moeda
 }
@@ -68,10 +76,16 @@ function changeCurrencyFrom() {
   } else if (fromCurrency.value === "EUR") {
     currencyName.innerHTML = "Euro";
     currencyImg.src = "./assets/euro.png";
-  } else {
+  } else if (fromCurrency.value === "GBP") {
+    currencyName.innerHTML = "Libra Esterlina";
+    currencyImg.src = "./assets/libra.png";
+  } else if (fromCurrency.value === "BRL") {
     currencyName.innerHTML = "Real";
     currencyImg.src = "./assets/real.png";
-  }
+  } else (fromCurrency.value === "BTC"); {
+    currencyName.innerHTML = "Bitcoin";
+    currencyImg.src = "./assets/bitcoin.png";
+  };
 
   convertValues();
 }
