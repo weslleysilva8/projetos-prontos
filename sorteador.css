@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #010000
+};
+
+body{
+    background-color: #010000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+button {
+    color: white;
+}
+p {
+    color: white;
+}
+#logo{
+    width: 583px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin: 156px 728px 587px 728px;
+    padding-left: 800px;
+}
