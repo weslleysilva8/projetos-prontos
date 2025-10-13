@@ -9,6 +9,10 @@ function generateNumber (){
     if (!sorteado) {
         drawButton.innerHTML = "Sortear novamente"
     }
+    if (min >= max) {
+        document.getElementById("Resultado").innerHTML = `O valor mínimo não pode ser maior ou igual ao valor máximo.`
+        return
+    }
 }
 drawButton.addEventListener("click", generateNumber)
  
