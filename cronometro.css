@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-image: url('assets/');
+    background-repeat: no-repeat;
+    background-size: cover; /* 'cover' para preencher, 'contain' para caber, 'auto' para tamanho original */
+    background-position: center; /* Centraliza a imagem */
+    height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+}

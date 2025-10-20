@@ -1,0 +1,8 @@
+this._s=this._s||{};(function(_){var window=this;
+try{
+_.t("KiuZBf");
+_.Ke(_.f1a,class extends _.Yn{static Sa(){return{service:{JC:_.Mu}}}constructor(a){super();this.JC=a.service.JC}isAvailable(){return this.JC.isAvailable()}isInBasicMode(){return this.JC.isInBasicMode()}async enterBasicMode(a){try{_.y(await _.y(this.JC.enterBasicMode(a)))}finally{_.y()}}async exitBasicMode(a){try{_.y(await _.y(this.JC.exitBasicMode(a)))}finally{_.y()}}async restoreToPreviousState(a){try{_.y(await _.y(this.JC.restoreToPreviousState(a)))}finally{_.y()}}});
+_.u();
+}catch(e){_._DumpException(e)}
+})(this._s);
+// Google Inc.
