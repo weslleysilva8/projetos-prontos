@@ -26,5 +26,18 @@ $ git pull
 ### Gerenciamento de branchs e GitFlow
 
 ```sh
-$ git checkout -b nome_da_branch
+$ git branch <branch>
+# cria uma nova branch local
+
+$ git checkout -b <branch>
+# cria uma nova branch local e navega para ela
+
+# git add + git commit 
+
+$ git push -u origin <branch>
+$ git push --set-upstream origin <branch>
+# envia o commit atual para o upstream remoto com o nome da branch
+
+$ git checkout <branch>
+# navega entre branchs
 ```
