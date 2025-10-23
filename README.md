@@ -26,6 +26,9 @@ $ git pull
 ### Gerenciamento de branchs e GitFlow
 
 ```sh
+$ git branch --list
+# lista todas as branchs locais ou sincronizadas com local
+
 $ git branch <branch>
 # cria uma nova branch local
 
@@ -40,4 +43,9 @@ $ git push --set-upstream origin <branch>
 
 $ git checkout <branch>
 # navega entre branchs
+
+$ git -d <branch>
+# remove uma branch local
+
+# remove uma branch remoto
 ```
