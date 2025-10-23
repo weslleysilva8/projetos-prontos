@@ -48,4 +48,11 @@ $ git -d <branch>
 # remove uma branch local
 
 # remove uma branch remoto
+
+# Mesclar
+$ git checkout main
+# Isso te levar para a outra <branch>
+
+$ git merge --no-ff <branch> 
+# Mescla as branches sem torna las 1 só, caso seja removido o --no-ff uni elas 
 ```
