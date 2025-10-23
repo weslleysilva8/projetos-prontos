@@ -1,34 +1,30 @@
-<h1 align="center">
-  <img src="https://github.com/weslleysilva8/projetos-prontos/blob/main/img/wecare.final.png?raw=true" alt="We Care" width="650px"
-    heith="650px">
-</h1>
+# Projetos Prontos
 
+## Git
 
+### Comandos básicos
+```sh
+$ git status
+# mostra o status do repositório atual
 
+$ git add <params>
+# adiciona arquivos no track para commit e enviar para o repositorio
+$ git add main.js # adiciona um arquivo especifico
+$ git add -A | --all # adiciona todos os arquivos untracked para tracked
+$ git add assets/ # adiciona uma pasta inteira para tracked
 
-<h3 align="center">
-  For your pet 🐶
-</h3>
+$ git commit -m "mensagem"
+# adiciona a mensagem para o commmit atual, com os arquivos marcados como tracked
 
-<br>
+$ git push 
+# envia os commits ainda não sincronizados com o repositorio
 
-<p align="center">
-  <a href="#house-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+$ git pull
+# atualiza a base local com o repositório remoto
+```
 
-<br>
+### Gerenciamento de branchs e GitFlow
 
-<img alt="Layout" src="https://github.com/weslleysilva8/projetos-prontos/blob/main/img/Smartphone.Desktop.png?raw=true">
-<br>
-
-
-## :house: About the project
-
-The project's purpose was to simulate a home page for hiring services for your pets.
-<br>
-
-## :computer: Technologies
-
-- <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-- <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+```sh
+$ git checkout -b nome_da_branch
+```
