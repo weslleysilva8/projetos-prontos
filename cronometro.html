@@ -9,23 +9,21 @@
 <body>
     <section>
         <div>
-            <h1>Cronômetro</h1>
+            <h1>Timer</h1>
             <div id="timer">
-                <h2>00:00:00:00</h2>
+                <h2 id="display">00:00:00:00</h2>
             </div>
             <div id="actions">
-<<<<<<< HEAD
-                <button onclick="restart()">Reiniciar</button>
-                <button onclick="start()">Iniciar</button>
-                <button onclick="stop()">Parar</button>
-=======
                 <button  onclick="restart()">Reiniciar</button>
                 <button  onclick="start()">Iniciar</button>
                 <button  onclick="stop()">Parar</button>
->>>>>>> e198354 (terminar projeto)
+                <button  onclick="marcar()">Marcar</button>
             </div>  
-        </div>
-    </section>
+            <div id="marcas">
+                <h3>Marcas:</h3>
+                <ul id="lista-marcas">
+                </ul>
+            </div>
 </body>
 <script src="cronometro.js"></script>
 </html>
