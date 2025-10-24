@@ -21,6 +21,12 @@ $ git push
 
 $ git pull
 # atualiza a base local com o repositório remoto
+
+$ git log
+# exibe o histórico de commits
+
+$ git diff
+# mostra as diferenças entre o código atual e o último commit
 ```
 
 ### Gerenciamento de branchs e GitFlow
@@ -55,4 +61,144 @@ $ git checkout main
 
 $ git merge --no-ff <branch> 
 # Mescla as branches sem torna las 1 só, caso seja removido o --no-ff uni elas 
+```
+### Sincronização e limpeza de branches
+
+```sh
+$ git branch -a
+# lista todas as branches (locais e remotas)
+
+$ git branch -r
+# lista apenas as branches remotas
+
+$ git push origin --delete <branch>
+# remove uma branch no repositório remoto
+
+$ git fetch --prune
+# atualiza a lista de branches e remove referências a branches remotas que já foram apagadas
+
+$ git remote prune origin
+# limpa referências antigas de branches remotas não existentes
+
+$ git branch -D <branch>
+# força a exclusão de uma branch local (mesmo sem merge)
+```
+### Diagnóstico e navegação
+
+```sh
+$ git branch --show-current
+# mostra em qual branch você está atualmente
+
+$ git remote -v
+# mostra os repositórios remotos configurados (como o 'origin')
+
+$ git remote show origin
+# exibe detalhes da conexão com o repositório remoto (branches rastreadas, push/pull, etc.)
+
+$ git log --oneline --graph --all
+# exibe o histórico de commits de forma resumida e visual (muito útil para entender merges)
+
+$ git reflog
+# mostra o histórico de tudo que foi feito (inclusive commits "perdidos")
+```
+### Correções e restaurações
+
+```sh
+$ git restore <arquivo>
+# restaura um arquivo modificado ao último commit
+
+$ git restore --staged <arquivo>
+# remove o arquivo da área de staging (depois do git add)
+
+$ git checkout -- <arquivo>
+# descarta alterações em um arquivo específico (antes do commit)
+
+$ git reset --soft <id>
+# volta commits mantendo as alterações no staging (antes do commit)
+
+$ git reset --hard <id>
+# volta commits e apaga alterações locais (⚠️ irreversível)
+
+$ git revert <id>
+# cria um novo commit que desfaz o commit especificado (modo seguro)
+```
+### Ferramentas de sincronização e controle remoto
+
+```sh
+$ git fetch
+# busca as atualizações do repositório remoto, mas sem alterar o código local
+
+$ git fetch --all
+# busca atualizações de todos os remotos configurados
+
+$ git pull origin main
+# atualiza o código local com as alterações da main remota
+
+$ git push origin main
+# envia commits locais da main para o repositório remoto
+
+$ git remote add origin <url>
+# adiciona um repositório remoto ao projeto
+
+$ git remote remove origin
+# remove o repositório remoto atual
+
+$ git clone <url>
+# clona um repositório remoto para sua máquina
+
+$ git remote rename origin upstream
+# renomeia o repositório remoto (útil em forks)
+```
+### Comandos avançados e produtividade
+
+```sh
+$ git stash
+# guarda alterações não commitadas temporariamente
+
+$ git stash pop
+# reaplica as alterações guardadas pelo stash
+
+$ git tag <nome>
+# cria uma tag para marcar uma versão específica
+
+$ git tag
+# lista todas as tags criadas
+
+$ git cherry-pick <id>
+# aplica um commit específico de outra branch na branch atual
+
+$ git rebase <branch>
+# reescreve o histórico de commits da branch atual sobre outra branch (mantém histórico linear)
+
+$ git rebase -i HEAD~3
+# reescreve os últimos 3 commits (para editar mensagens, unir ou apagar commits)
+
+$ git shortlog -sn
+# mostra quantos commits cada autor fez (estatísticas rápidas)
+
+$ git blame <arquivo>
+# mostra quem alterou cada linha de um arquivo
+```
+### Fluxo de trabalho sugerido (Git Flow simplificado)
+
+```sh
+# 1. Criar uma nova branch de feature
+$ git checkout -b feature/nova-funcionalidade
+
+# 2. Adicionar alterações e commitar
+$ git add .
+$ git commit -m "Implementa nova funcionalidade X"
+
+# 3. Enviar branch para o repositório remoto
+$ git push -u origin feature/nova-funcionalidade
+
+# 4. Mesclar alterações na main
+$ git checkout main
+$ git pull
+$ git merge --no-ff feature/nova-funcionalidade
+$ git push origin main
+
+# 5. Deletar branches que já foram mescladas
+$ git branch -d feature/nova-funcionalidade
+$ git push origin --delete feature/nova-funcionalidade
 ```
