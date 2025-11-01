@@ -6,10 +6,10 @@ const toCurrency = document.querySelector(".currency-select2");
 // Taxas de câmbio fixas
 const rates = {
   BRL: 1,
-  USD: 5.33,
-  EUR: 6.25,
-  GBP: 7.18,
-  BTC: 627613.73
+  USD: 5.38,
+  EUR: 6.23,
+  GBP: 7.07,
+  BTC: 593621.97
 };
 
 // Função principal
