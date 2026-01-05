@@ -202,3 +202,25 @@ $ git push origin main
 $ git branch -d feature/nova-funcionalidade
 $ git push origin --delete feature/nova-funcionalidade
 ```
+
+### Copiar arquivos entre repositórios (Bash)
+
+```sh
+# Acessar o repositório de origem
+cd /caminho/do/repo-origem
+
+# Copiar um arquivo específico para outro repositório
+cp arquivo.ext /caminho/do/repo-destino/
+
+# Copiar vários arquivos para outro repositório
+cp arquivo1.ext arquivo2.ext /caminho/do/repo-destino/
+
+# Copiar uma pasta inteira para outro repositório
+cp -r pasta/ /caminho/do/repo-destino/
+
+# Copiar apenas arquivos alterados (recomendado)
+rsync -av pasta/ /caminho/do/repo-destino/pasta/
+
+# Acessar o repositório de destino
+cd /caminho/do/repo-destino
+```
