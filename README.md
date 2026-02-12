@@ -13,7 +13,7 @@ $ git add main.js # adiciona um arquivo especifico
 $ git add -A | --all # adiciona todos os arquivos untracked para tracked
 $ git add assets/ # adiciona uma pasta inteira para tracked
 
-$ git commit -m "mensagem"
+$ git commit -m "mensagem" 
 # adiciona a mensagem para o commmit atual, com os arquivos marcados como tracked
 
 $ git push 
